@@ -7,3 +7,5 @@ trascendence, blockhain, solidity, ethereum
 <p>Link: https://www.geeksforgeeks.org/how-to-store-data-on-ethereum-blockchain/</p>
 <h3>3. What type of data to actually store on blockchain</h4>
 <p>Link: https://stackoverflow.com/questions/50781062/storing-users-data-on-ethereum-blockchain. Only hash or all the info??? </p>
+<h3>4. Blockchain deployment as 4th service in docker apart from frontend, backend, db???</h3>
+<p>Link: https://www.abastos.dev/projects/transcendence/</p>
