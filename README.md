@@ -11,3 +11,5 @@ trascendence, blockhain, solidity, ethereum
 <p>Link: https://www.abastos.dev/projects/transcendence/</p>
 <h4>5. Running ganachee</h4>
 <p>./ganache-2.7.1-linux-x86_64.AppImage </p>
+<h4>6. Building solidity project using truffle for vscode</h4>
+<p>Link: https://archive.trufflesuite.com/blog/build-on-web3-with-truffle-vs-code-extension/</p>
