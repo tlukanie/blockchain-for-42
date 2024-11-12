@@ -27,4 +27,4 @@ trascendence, blockhain, solidity, ethereum
   <li>npx truffle init</li>
 </ol>
 <h2>Tasks for 15.11.24</h2>
-<p>1. Instead of only creation od the contract on blockchain, test contract call, events, retrieve the stored data on blockchain</p>
+<p>1. Instead of only creation of the contract on blockchain, test contract call, events, retrieve the stored data on blockchain</p>
