@@ -15,3 +15,10 @@ trascendence, blockhain, solidity, ethereum
 <p>Link: https://archive.trufflesuite.com/blog/build-on-web3-with-truffle-vs-code-extension/</p>
 <h4>7. Deploy Solidity Smart Contracts with Ganache</h4>
 <p>Link: https://www.youtube.com/watch?v=UnNPv6zEbwc&t=171s/p>
+<h4>8. How to use ganache gui with truffle !</h4>
+<p>Link: https://www.youtube.com/watch?v=aRJA1r1Gwu0</p>
+<h4>Commands to create smart contract + create new solidity project</h4>
+<ol>
+  <li>npx truffle test</li>
+  <li>npx truffle init</li>
+</ol>
