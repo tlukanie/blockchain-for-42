@@ -19,12 +19,14 @@ trascendence, blockhain, solidity, ethereum
 <p>Folder: truffle_smart_contract_1, truffle develop -> migrate -> CANT DEPLOY ToDo.sol . Maybe problems with migration .js file?</p>
 <h4>8. How to use ganache gui with truffle !</h4>
 <p>Link: https://www.youtube.com/watch?v=aRJA1r1Gwu0</p>
-<h4>Website to check ethereum raw transactions</h4>
+<h4>9.Website to check ethereum raw transactions</h4>
 <p>Link: https://rawtxdecode.in/</p>
 <h4>Commands to create smart contract + create new solidity project</h4>
 <ol>
   <li>npx truffle test</li>
   <li>npx truffle init</li>
 </ol>
+<h4>10. Examples of blockchain implementation in other 42 transcendence projects</h4>
+<p>Link: https://github.com/DGross245/42-ft_transcendence/tree/master/contracts</p>
 <h2>Tasks for 15.11.24</h2>
 <p>1. Instead of only creation of the contract on blockchain, test contract call, events, retrieve the stored data on blockchain</p>
