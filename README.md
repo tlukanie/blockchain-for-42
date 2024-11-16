@@ -28,5 +28,7 @@ trascendence, blockhain, solidity, ethereum
 </ol>
 <h4>10. Examples of blockchain implementation in other 42 transcendence projects</h4>
 <p>Link: https://github.com/DGross245/42-ft_transcendence/tree/master/contracts</p>
-<h2>Tasks for 15.11.24</h2>
+<h2>Tasks for 19.11.24</h2>
 <p>1. Instead of only creation of the contract on blockchain, test contract call, events, retrieve the stored data on blockchain</p>
+<p>2.Test other frameworks and local development environments</p>
+
