@@ -53,5 +53,5 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
   <li>Better research usage of migrations, tests</li>
   <li>Run truffle and ganache on linux with similar to school working environment = OR create docker and put the program inside</li>
   <li>Test other frameworks and local development environments</li>
-  <li>Test the function to retrieve the data from the blockchain: https://us05web.zoom.us/j/87067388597?pwd=L2ya4QBiVoXcW4jayK25RR4QrJ1Iqz.1</li>
+  <li>Test the function to retrieve the data from the blockchain: https://www.quora.com/How-can-I-store-data-on-the-blockchain-with-a-smart-contract</li>
 </ol>
