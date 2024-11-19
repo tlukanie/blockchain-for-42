@@ -44,4 +44,12 @@ trascendence, blockhain, solidity, ethereum
 const instance = await HelloBlockchain.at("0xYourContractAddressHere");
 </p>
 <p>4. To create new contract and call the function at the same time use <truffle test></p>
-
+<h2>Tasks for the future</h2>
+<ol>
+  <li>Learn about events/modifiers</li>
+  <li>Learn solidity syntax, how to work with different data types</li>
+  <li>Difference between contract calls?</li>
+  <li>Test restreiving data from python file and using smart contracts putting it on blockchain</li>
+  <li>Better research usage of migrations, tests</li>
+  <li>Run truffle and ganache on linux with similar to school working environment = OR create docker and put the program inside</li>
+</ol>
