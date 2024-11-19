@@ -43,4 +43,5 @@ trascendence, blockhain, solidity, ethereum
 <p>const HelloBlockchain = await artifacts.require("HelloBlockchain"); <br>
 const instance = await HelloBlockchain.at("0xYourContractAddressHere");
 </p>
+<p>4. To create new contract and call the function at the same time use <truffle test></p>
 
