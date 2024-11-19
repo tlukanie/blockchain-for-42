@@ -1,10 +1,9 @@
 pragma solidity >=0.4.25 <0.9.0;
 
-contract HelloBlockchain {
-    //enum StateType { Request, Respond }
-	enum StateType {Request}
+contract ValueStorage {
+	enum StateType_vs {Request}
 
-    StateType public  State;
+    StateType_vs public  State;
     address public  Requestor;
     //address public  Responder;
 
@@ -14,7 +13,7 @@ contract HelloBlockchain {
     constructor(string memory message) {
         Requestor = msg.sender;
         RequestMessage = message;
-        State = StateType.Request;
+        State = StateType_vs.Request;
     }
 
     // call this function to send a request
@@ -25,14 +24,6 @@ contract HelloBlockchain {
         }
 
         RequestMessage = requestMessage;
-        State = StateType.Request;
+        State = StateType_vs.Request;
     }
-
-    // // call this function to send a response
-    // function SendResponse(string memory responseMessage) public {
-
-    //     Responder = msg.sender;
-    //     ResponseMessage = responseMessage;
-    //     State = StateType.Respond;
-    // }
 }
