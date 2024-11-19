@@ -29,7 +29,8 @@ trascendence, blockhain, solidity, ethereum
 <h4>10. Examples of blockchain implementation in other 42 transcendence projects</h4>
 <p>Link: https://github.com/DGross245/42-ft_transcendence/tree/master/contracts</p>
 <h2>Tasks for 19.11.24</h2>
-<p>1. Instead of only creation of the contract on blockchain, test contract call, events, retrieve the stored data on blockchain</p>
+<p>Instead of only creation of the contract on blockchain, test contract call, events, retrieve the stored data on blockchain</p>
+<p>Test interaction in different ganache workspaces</p>
 <h3>Current folder</h3>
 <h4>Compilation</h4>
 <p>truffle compile</p>
