@@ -31,4 +31,17 @@ trascendence, blockhain, solidity, ethereum
 <h2>Tasks for 19.11.24</h2>
 <p>1. Instead of only creation of the contract on blockchain, test contract call, events, retrieve the stored data on blockchain</p>
 <p>2.Test other frameworks and local development environments</p>
+<h3>Current folder</h3>
+<h4>Compilation</h4>
+<p>truffle compile</p>
+<h4>Deployment</h4>
+<p>truffle migrate</p>
+<h4>Contract interaction</h4>
+<p>1.truffle console</p>
+<p>2.in terminal use tests from store.js to call the function in the contract</p>
+<p>3.if needed to call the function at the specified address use:</p>
+<p>const HelloBlockchain = await artifacts.require("HelloBlockchain"); <br>
+const instance = await HelloBlockchain.at("0xYourContractAddressHere");
+</p>
+<p>4. To create new contract and call the function at the same time use <truffle test></p>
 
