@@ -30,7 +30,6 @@ trascendence, blockhain, solidity, ethereum
 <p>Link: https://github.com/DGross245/42-ft_transcendence/tree/master/contracts</p>
 <h2>Tasks for 19.11.24</h2>
 <p>1. Instead of only creation of the contract on blockchain, test contract call, events, retrieve the stored data on blockchain</p>
-<p>2.Test other frameworks and local development environments</p>
 <h3>Current folder</h3>
 <h4>Compilation</h4>
 <p>truffle compile</p>
@@ -52,4 +51,5 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
   <li>Test restreiving data from python file and using smart contracts putting it on blockchain</li>
   <li>Better research usage of migrations, tests</li>
   <li>Run truffle and ganache on linux with similar to school working environment = OR create docker and put the program inside</li>
+  <li>Test other frameworks and local development environments</li>
 </ol>
