@@ -37,9 +37,9 @@ trascendence, blockhain, solidity, ethereum
 <h4>Deployment</h4>
 <p>truffle migrate</p>
 <h4>Contract interaction</h4>
-<p>truffle console</p>
-<p>in terminal use tests from store.js to call the function in the contract</p>
-<p>if needed to call the function at the specified address use:</p>
+<p>1.truffle console</p>
+<p>2.in terminal use tests from store.js to call the function in the contract</p>
+<p>3.if needed to call the function at the specified address use:</p>
 <p>const HelloBlockchain = await artifacts.require("HelloBlockchain"); <br>
 const instance = await HelloBlockchain.at("0xYourContractAddressHere");
 </p>
