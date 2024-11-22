@@ -58,3 +58,4 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
 <h3>22.11.24</h3>
 <h4>1. Getting Started with smart contract: https://blog.arashtad.com/blockchain/ethereum/smart-contracts-using-solidity/</h4>
 <h4>2. Deploying Smart Contract using Python web3 tools: https://medium.com/@arashtad/how-to-deploy-a-smart-contract-using-python-web3-tools-a-full-coverage-59e6c2ad3f9f</h4>
+<h4>3. Should I retrieve data from the Blockchain in python code and display it on webpage to keep track of the scores?? https://stackoverflow.com/questions/59160115/how-can-i-get-the-data-stored-in-blockchain-and-then-display-on-webpage</h4>
