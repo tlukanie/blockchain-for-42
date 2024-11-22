@@ -44,7 +44,18 @@ trascendence, blockhain, solidity, ethereum
 const instance = await HelloBlockchain.at("0xYourContractAddressHere");
 </p>
 <p>4. To create new contract and call the function at the same time use <truffle test></p>
-<h2>Tasks for 22.11.24</h2>
+<h3>22.11.24</h3>
+<h4>1. Getting Started with smart contract: https://blog.arashtad.com/blockchain/ethereum/smart-contracts-using-solidity/</h4>
+<h4>2. Deploying Smart Contract using Python web3 tools: https://medium.com/@arashtad/how-to-deploy-a-smart-contract-using-python-web3-tools-a-full-coverage-59e6c2ad3f9f</h4>
+<h4>3. Should I retrieve data from the Blockchain in python code and display it on webpage to keep track of the scores?? https://stackoverflow.com/questions/59160115/how-can-i-get-the-data-stored-in-blockchain-and-then-display-on-webpage</h4>
+<h4>Stopped on web3_simple_storage. Next time try to retreive data from a certain block!</h4>
+<h2>Tasks for 24.11.24</h2>
+  <ol>
+    <li>Compile current python project</li>
+    <li>Ask Misha about data storage</li>
+    <li>Add and test web3, solcx on the current project</li>
+  </ol>
+<h2>Tasks for 26.11.24</h2>
 <ol>
   <li>Learn about events/modifiers</li>
   <li>Learn solidity syntax, how to work with different data types</li>
@@ -55,7 +66,3 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
   <li>Test other frameworks and local development environments</li>
   <li>Test the function to retrieve the data from the blockchain: https://www.quora.com/How-can-I-store-data-on-the-blockchain-with-a-smart-contract</li>
 </ol>
-<h3>22.11.24</h3>
-<h4>1. Getting Started with smart contract: https://blog.arashtad.com/blockchain/ethereum/smart-contracts-using-solidity/</h4>
-<h4>2. Deploying Smart Contract using Python web3 tools: https://medium.com/@arashtad/how-to-deploy-a-smart-contract-using-python-web3-tools-a-full-coverage-59e6c2ad3f9f</h4>
-<h4>3. Should I retrieve data from the Blockchain in python code and display it on webpage to keep track of the scores?? https://stackoverflow.com/questions/59160115/how-can-i-get-the-data-stored-in-blockchain-and-then-display-on-webpage</h4>
