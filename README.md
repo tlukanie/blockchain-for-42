@@ -55,3 +55,6 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
   <li>Test other frameworks and local development environments</li>
   <li>Test the function to retrieve the data from the blockchain: https://www.quora.com/How-can-I-store-data-on-the-blockchain-with-a-smart-contract</li>
 </ol>
+<h3>22.11.24</h3>
+<h4>1. Getting Started with smart contract: https://blog.arashtad.com/blockchain/ethereum/smart-contracts-using-solidity/</h4>
+<h4>2. Deploying Smart Contract using Python web3 tools: https://medium.com/@arashtad/how-to-deploy-a-smart-contract-using-python-web3-tools-a-full-coverage-59e6c2ad3f9f</h4>
