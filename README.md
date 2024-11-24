@@ -68,8 +68,11 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
 </ol>
 <h2>24.11.24</h2>
 <p>1. Django and Web3: https://medium.com/@adabur/how-to-build-a-decentralized-authentication-system-with-django-and-web3-287e9c6c5301</p>
-<p>2. To start docker on mac: <colima start>
-<docker ps -a></p>
+<p>2. To start docker on mac: 
+  <ul>
+  <li>colima start</li>
+<li>docker ps -a </li>
+  </ul></p>
 <p>3. To acces psql on mac from docker:
 <ul>
   <li>docker-compose up -d</li>
