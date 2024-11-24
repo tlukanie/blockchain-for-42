@@ -81,3 +81,7 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
   <li>docker exec -it postgres-db bash</li>
   <li>psql -U django_admin -d django</li>
 </ul></p>
+<h2>Tasks for the future:</h2>
+<ol>
+  <li><b>Idea:</b> connecting user wallet from the start like here https://github.com/DGross245/42-ft_transcendence</li>
+</ol>
