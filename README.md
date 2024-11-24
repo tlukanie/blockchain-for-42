@@ -67,4 +67,12 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
   <li>Test the function to retrieve the data from the blockchain: https://www.quora.com/How-can-I-store-data-on-the-blockchain-with-a-smart-contract</li>
 </ol>
 <h2>24.11.24</h2>
-<p>Django and Web3: https://medium.com/@adabur/how-to-build-a-decentralized-authentication-system-with-django-and-web3-287e9c6c5301</p>
+<p>1. Django and Web3: https://medium.com/@adabur/how-to-build-a-decentralized-authentication-system-with-django-and-web3-287e9c6c5301</p>
+<p>2. To start docker on mac: <colima start>
+<docker ps -a></p>
+<p>3. To acces psql on mac from docker:
+<ul>
+  <li>docker-compose up -d</li>
+  <li>docker exec -it postgres-db bash</li>
+  <li>psql -U django_admin -d django</li>
+</ul></p>
