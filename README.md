@@ -66,6 +66,7 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
   <li>Test other frameworks and local development environments</li>
   <li>Test the function to retrieve the data from the blockchain: https://www.quora.com/How-can-I-store-data-on-the-blockchain-with-a-smart-contract</li>
   <li><b>EVENTS!!!</b>: https://medium.com/coinmonks/solidity-events-explained-82dc9104bc62#:~:text=In%20Solidity%2C%20events%20are%20a,it%20transparent%20and%20easily%20accessible.</li>
+  <li><b>MODIFIERS</b>: https://www.freecodecamp.org/news/what-are-solidity-modifiers/</li>
 </ol>
 <h2>24.11.24</h2>
 <p>1. Django and Web3: https://medium.com/@adabur/how-to-build-a-decentralized-authentication-system-with-django-and-web3-287e9c6c5301</p>
