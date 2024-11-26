@@ -13,4 +13,4 @@ else:
 
 print(winner)
 
-#Extract bytecode and ABI from WinnerStorage json
+#store result on blockchain for each of the players on two separate addresses
