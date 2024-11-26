@@ -5,6 +5,24 @@ contract WinnerStorage {
 
     // Event to emit when score is updated
     event scoreUpdated(uint256 oldscore, uint256 newscore);
+	// Event to emit when user is added
+	event userAdded();
+
+	//Struct definition
+	struct User {
+		uint256 score;
+		string	name;
+		bool	winner;
+	}
+
+	//Array to store users
+	User[] public users;
+
+	//Mapping from name to score
+	mapping(string => uint256) public nameToScore;
+
+	//Maping from name to status
+	mapping(string => bool) public nameToStatus;
 
     // Function to store a score
     function storeScore(uint256 _score) public {
@@ -17,4 +35,15 @@ contract WinnerStorage {
     function retrieve() public view returns (uint256) {
         return score;
     }
+
+	// Function to add users
+	function addUser(string memory _name, uint256 _score, bool _winner) public {
+		users.push(User(_score, _name, _winner));
+		nameToScore[_name] = _score;
+		nameToStatus[_name] = _winner;
+		emit userAdded();
+	}
+
+	//Function to update winner status
+
 }
