@@ -29,7 +29,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/tanya/ft_transcendence_42/ft_transcendence_42/ft_transcendence/venv"
+set -gx VIRTUAL_ENV "/Users/tanya/blockchain-for-42/transcendence/ft_transcendence/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

@@ -24,13 +24,6 @@ contract WinnerStorage {
 	//Maping from name to status
 	mapping(string => bool) public nameToStatus;
 
-    // Function to store a score
-    function storeScore(uint256 _score) public {
-        uint256 oldscore = score; // Store the current score value
-        score = _score; // Update the score variable
-        emit scoreUpdated(oldscore, _score); // Emit the event
-    }
-
     // Function to retrieve the score
     function retrieve() public view returns (uint256) {
         return score;
@@ -43,6 +36,14 @@ contract WinnerStorage {
 		nameToStatus[_name] = _winner;
 		emit userAdded();
 	}
+
+	    // Function to store a score
+    function storeScore(string memory _name, uint256 _score) public {
+        uint256 oldscore = score; // Store the current score value
+        score = oldscore + _score; // Update the score variable
+		nameToScore[_name] = score;
+        emit scoreUpdated(oldscore, score); // Emit the event
+    }
 
 	//Function to update winner status
 

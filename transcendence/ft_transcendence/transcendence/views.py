@@ -19,6 +19,9 @@ def calculator(request):
 def chat_view(request):
     return render(request, 'pong_app/chat.html')
 
+def	wallet_view(request):
+	return render(request, 'pong_app/wallet.html')
+
 def login_view(request):
     if (request.user.is_authenticated):
         return redirect('index')
@@ -94,3 +97,68 @@ def bot(request):
 
 def chat(request):
     return render(request, 'pong_app/chat.html')
+
+def	wallet(request):
+	return render(request, 'pong_app/wallet.html')
+
+from django.shortcuts import render
+from django.http import HttpResponse
+from web3 import Web3
+
+# Function to get Web3 instance
+def get_web3_instance():
+    return Web3(Web3.HTTPProvider("http://127.0.0.1:7545"))  # Adjust provider URL as needed
+
+# Function to load the smart contract
+def load_contract(abi_path, contract_address):
+    with open(abi_path, 'r') as abi_file:
+        abi_json = json.load(abi_file)
+    contract_abi = abi_json["abi"]
+    web3 = get_web3_instance()
+    return web3.eth.contract(address=contract_address, abi=contract_abi)
+
+def bind_wallet(request):
+    if request.method == 'POST':
+        wallet_address = request.POST.get('address')
+        private_key = request.POST.get('private_key')
+        user = request.user
+        score = Score.objects.get(user=user)
+        print(user.username)
+        print(score.score)
+
+        # Save wallet data (this could also be stored in the database)
+        wallet_data = {
+            'address': wallet_address,
+            'private_key': private_key,
+        }
+        print(wallet_address, private_key)
+
+        # Add user to the blockchain
+        try:
+            web3 = get_web3_instance()
+            if web3.is_connected():
+                print("web3 is connected")
+            contract_address = "0x3522DB9120183097fE82842792C7516B9093dcbE"  # Replace with your contract address
+            abi_path = "/Users/tanya/blockchain-for-42/transcendence/ft_transcendence/transcendence/blockchain/build/contracts/WinnerStorage.json"  # Replace with the correct path to your ABI JSON file
+
+            contract = load_contract(abi_path, contract_address)
+
+            # Build the transaction
+            transaction = contract.functions.addUser(user.username, score.score, True).build_transaction({
+                'from': wallet_address,
+                'gas': 2000000,
+                'gasPrice': web3.eth.gas_price,
+                'nonce': web3.eth.get_transaction_count(wallet_address),
+            })
+
+            # Sign and send the transaction
+            signed_tx = web3.eth.account.sign_transaction(transaction, private_key)
+            tx_hash = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
+
+            # Return the transaction hash as confirmation
+            return HttpResponse(f"User added to blockchain. Transaction Hash: {web3.to_hex(tx_hash)}")
+        except Exception as e:
+            return HttpResponse(f"Error adding user to blockchain: {str(e)}")
+
+    return render(request, 'pong_app/wallet.html')
+

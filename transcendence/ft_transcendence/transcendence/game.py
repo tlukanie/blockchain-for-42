@@ -51,8 +51,8 @@ class RoomGame:
         self.paddle_speed = 20
         self.win_score = 5
         # Define the contract address
-        contract_address = "0x3aa4385C27BA8c578A7886F6c31400Df04268855"
-        self.contract = load_contract("/Users/tanya/ft_transcendence_42/ft_transcendence_42/ft_transcendence/transcendence/blockchain/build/contracts/WinnerStorage.json", contract_address)
+        contract_address = "0x3522DB9120183097fE82842792C7516B9093dcbE"
+        self.contract = load_contract("/Users/tanya/blockchain-for-42/transcendence/ft_transcendence/transcendence/blockchain/build/contracts/WinnerStorage.json", contract_address)
 
     async def game_loop(self, send_update):
         while self.ready['right'] and self.ready['left']:
@@ -135,12 +135,13 @@ class RoomGame:
         }
     
     def save_results_on_blockchain(self, winner, winner_score, loser, loser_score):
+        print(winner)
+        print(loser)
         try:
             web3 = get_web3_instance()
             winner_addr = "0xf1325962317d860F5aDfCD29937bedE945023C23"
             loser_addr = "0xa94e0AF6Eec8075d3a4Df09a36eFFEBEAFeA0DCf"
-            tx_winner = self.contract.functions.addUser(
-					"winner", winner_score, True
+            tx_winner = self.contract.functions.storeScore(winner, winner_score
 				).build_transaction({
 					'from': winner_addr,
 					'gas': 2000000,
@@ -150,8 +151,7 @@ class RoomGame:
             private_key_winner = "0x846f8e87c2c1bda596bf33c4a4d0d4666fcd1b8911071962fde9ebd3dee4bcee"
             signed_tx_winner = web3.eth.account.sign_transaction(tx_winner, private_key_winner)
             tx_hash_winner = web3.eth.send_raw_transaction(signed_tx_winner.raw_transaction)
-            tx_loser = self.contract.functions.addUser(
-					"loser", loser_score, False
+            tx_loser = self.contract.functions.storeScore(loser, loser_score
 				).build_transaction({
 					'from': loser_addr,
 					'gas': 2000000,
