@@ -114,6 +114,7 @@ def load_contract(abi_path, contract_address):
     with open(abi_path, 'r') as abi_file:
         abi_json = json.load(abi_file)
     contract_abi = abi_json["abi"]
+    #print(abi_json["address"])
     web3 = get_web3_instance()
     return web3.eth.contract(address=contract_address, abi=contract_abi)
 
@@ -125,6 +126,7 @@ def bind_wallet(request):
         score = Score.objects.get(user=user)
         print(user.username)
         print(score.score)
+		
 
         # Save wallet data (this could also be stored in the database)
         wallet_data = {
