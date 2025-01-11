@@ -85,3 +85,9 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
 <ol>
   <li><b>Idea:</b> connecting user wallet from the start like here https://github.com/DGross245/42-ft_transcendence</li>
 </ol>
+<h2>11.01.25</h2>
+<h3>Installation of the truffle framework + ganache</h3>
+  <h4>nvm</h4>
+<p>https://github.com/nvm-sh/nvm</p>
+<h4>truffle</h4>
+<p></p>
