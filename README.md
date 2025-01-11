@@ -91,3 +91,8 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
 <p>https://github.com/nvm-sh/nvm</p>
 <h4>truffle</h4>
 <p>https://github.com/LifnaJos/installing-truffle-on-ubuntu-22.04</p>
+<h4>To install solcx and webs</h4>
+<ol>
+  <li>solcx: pip install py-solc-x</li>
+  <li>webs: pip3 install web3</li>
+</ol>
