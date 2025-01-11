@@ -96,3 +96,13 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
   <li>solcx: pip install py-solc-x</li>
   <li>webs: pip3 install web3</li>
 </ol>
+<h4>To run transcendence</h4>
+<p>docker compose up -d</p>
+<p>python3 -m venv venv</p>
+<p>source venv/bin/activate</p>
+<p>pip install -r requirements.txt</p>
+<p>python3 manage.py makemigrations</p>
+<p>python3 manage.py migrate</p>
+
+<p>./manage.py runserver</p>
+
