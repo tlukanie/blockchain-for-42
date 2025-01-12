@@ -105,4 +105,5 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
 <p>python3 manage.py migrate</p>
 
 <p>./manage.py runserver</p>
-
+<h2>12.01.25</h2>
+<p>Updated blockchain branch, but still need to add functionality to game.py and fix bind wallet button</p>
