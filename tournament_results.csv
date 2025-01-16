@@ -1,0 +1,4 @@
+tournament_id,game_id,game_type,loser_name,loser_score,winner_name,winner_score
+dream_42,1,semi_final,Bob,10,Marry,50
+dream_42,2,semi_final,Lucy,20,John,60
+dream_42,3,final,Marry,40,John,70

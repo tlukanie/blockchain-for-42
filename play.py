@@ -32,7 +32,7 @@ with open("./build/contracts/WinnerStorage.json", "r") as file:
 contract_abi = contract_json["abi"]
 #print(contract_abi)
 # Define the contract address
-contract_address = "0xF885FcbF1CDF521ba03BB2EaCFFca955B6f05680"
+contract_address = "0x0bcF56DF3716657521eD1DaAB226FFF08e246e4E"
 
 # Connect to the Ethereum provider
 web3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
@@ -47,7 +47,7 @@ transaction = contract.functions.addUser("player1", player_1, winner_1).build_tr
     'nonce': web3.eth.get_transaction_count(player1_addr),
 })
 
-# Sign and send the transaction for playe1
+# Sign and send the transaction for player1
 private_key = player1_prvt_key
 signed_tx = web3.eth.account.sign_transaction(transaction, private_key)
 tx_hash = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
