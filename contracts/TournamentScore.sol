@@ -66,12 +66,22 @@ contract TournamentScore {
         );
     }
 
-    // Function to retrieve a game
-    function getGame(string memory _tournament_id, uint256 _game_id)
-        public
-        view
-        returns (Tournament memory)
-    {
-        return tournaments[_tournament_id][_game_id];
-    }
+    // // Function to retrieve a game
+    // function getGame(string memory _tournament_id, uint256 _game_id)
+    //     public
+    //     view
+    //     returns (Tournament memory)
+    // {
+    //     return tournaments[_tournament_id][_game_id];
+    // }
+
+	function getGame(string memory _tournament_id, uint256 _game_id)
+		public
+		view
+		returns (Tournament memory)
+	{
+		Tournament memory game = tournaments[_tournament_id][_game_id];
+		return game;
+	}
+
 }

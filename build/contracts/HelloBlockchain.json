@@ -6684,12 +6684,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x811590FB64F88A1f714316b9D259794fD31f9622",
-      "transactionHash": "0x26184ed89a8d202ebdf52c4b7ac68d9c68abaa698c7f0c56a385b24a902b842e"
+      "address": "0x9f382B711d25b733b028683405e9995F32d3f171",
+      "transactionHash": "0x6117959cf447ba974e53dec865f3c72262a939e0db1d7714f0d9021d2a4318b8"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2025-01-16T13:09:50.864Z",
+  "updatedAt": "2025-01-16T15:02:14.733Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
