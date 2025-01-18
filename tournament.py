@@ -21,7 +21,7 @@ with open("./build/contracts/TournamentScore.json", "r") as file:
 contract_abi = contract_json["abi"]
 print(contract_abi)
 # Define the contract address
-contract_address = "0x5ccEF16e23DF50401195C3b7a45dE9781AA42029"
+contract_address = "0xE2ebaF988E95Be65147c96d30EAC836E5a6593dB"
 
 # Connect to the Ethereum provider
 web3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
@@ -79,10 +79,7 @@ for index, row in df.iterrows():
 
     nonce += 1
 
-    #index +=1
-
-    # signed_tx = web3.eth.account.sign_transaction(tx, private_key=private_key)
-    # tx_hash = web3.eth.send_raw_transaction(signed_tx.rawTransaction)
-    # print(f"Transaction hash: {tx_hash.hex()}")
-
-
+gm_id = 1
+gm_tl = 3
+tournament_info = contract.functions.getTournamentInfo("dream_43", 2).call()
+print(tournament_info)

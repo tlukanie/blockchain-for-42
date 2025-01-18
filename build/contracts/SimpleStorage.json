@@ -5053,12 +5053,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xeb6B2bb6fCf48D695d668d8dc02EaD1163c6D06D",
-      "transactionHash": "0xadb1e9565f842a5c858b38e2973b4bca60fdfdcde511212a94369844e85692e3"
+      "address": "0xCE4dAFcFA2179aB1f3cafEE0c878c92261404A28",
+      "transactionHash": "0x466207d2ea8f554affb0d4560acb46d7cf1ec3a0cbb615129cd35557866bc04e"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2025-01-16T15:02:15.051Z",
+  "updatedAt": "2025-01-17T17:33:27.718Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

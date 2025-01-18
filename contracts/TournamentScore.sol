@@ -13,6 +13,10 @@ contract TournamentScore {
         uint256 winner_score
     );
 
+	// event TournamentInfoTracked(
+	// 	string	tournament_id
+	// );
+
     // Struct definition
     struct Tournament {
         string tournament_id;
@@ -26,6 +30,9 @@ contract TournamentScore {
 
     // Mapping to store games by tournament ID and game ID
     mapping(string => mapping(uint256 => Tournament)) public tournaments;
+
+	// // Mapping to track all game IDs in a tournament
+    // mapping(string => uint256[]) public tournamentGameIds;
 
     // Function to add a game
     function addGame(
@@ -84,4 +91,20 @@ contract TournamentScore {
 		return game;
 	}
 
+	function getTournamentInfo(string memory _tournament_id, uint256 _game_id)
+		public
+		view
+		returns (Tournament memory)
+	{
+		Tournament memory all_data = tournaments[_tournament_id][_game_id];
+		return all_data;
+
+		// emit TournamentInfoTracked(_tournament_id);
+	}
+
+
 }
+
+
+
+

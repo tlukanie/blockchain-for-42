@@ -2,3 +2,7 @@ tournament_id,game_id,game_type,loser_name,loser_score,winner_name,winner_score
 dream_43,1,semi_final,Bob,10,Marry,50
 dream_43,2,semi_final,Lucy,20,John,60
 dream_43,3,final,Marry,40,John,70
+dream_88,1,semi_final,Rock,5,Zoya,33
+dream_88,2,semi_final,Boris,1,Brian,8
+dream_88,3,final,Zoya,10,Brian,15
+no_dream,1,semi_final,Garry,2,Josh,20
