@@ -6,6 +6,9 @@ from web3 import Web3
 player1_addr = "0x080851476334dbD780f33dAEf459b7604E7eFDdf"
 player1_prvt_key = "0x76f4d16a89093d5c9e8a7e43520343f6ff6b8577e3e9a2ffb6290fbbb67b6e53"
 
+loser_addr = "0x0A0b552f1d7Bb140652689CF9A209637bFd58218"
+loser_prvt_key = "0x267883e6844ae3b1b4b3f102f436ebab8a61f17ac4e2b6b7cce9f7171f44611d"
+
 # Load CSV into a DataFrame
 csv_file = "tournament_results.csv"
 df = pd.read_csv(csv_file)
@@ -78,13 +81,10 @@ for index, row in df.iterrows():
 
     nonce += 1
 
-# gm_id = 1
-# gm_tl = 3
-# tournament_info = contract.functions.getTournamentInfo("dream_43", 2).call()
-# print(tournament_info)
+	
 
-
-tourn_id = "no_dream"
+# getting all the related information about games in the tournament
+tourn_id = "dream_88"
 print("Tournament_id is " + tourn_id)
 for gm_ctr in range(1,4):
 	try:
