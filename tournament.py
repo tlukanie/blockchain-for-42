@@ -21,8 +21,7 @@ with open("./build/contracts/TournamentScore.json", "r") as file:
 contract_abi = contract_json["abi"]
 print(contract_abi)
 # Define the contract address
-contract_address = "0xE2ebaF988E95Be65147c96d30EAC836E5a6593dB"
-
+contract_address = "0x7D19A4075d66AD606599008fc0605182917c6638"
 # Connect to the Ethereum provider
 web3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
 
@@ -79,7 +78,24 @@ for index, row in df.iterrows():
 
     nonce += 1
 
-gm_id = 1
-gm_tl = 3
-tournament_info = contract.functions.getTournamentInfo("dream_43", 2).call()
-print(tournament_info)
+# gm_id = 1
+# gm_tl = 3
+# tournament_info = contract.functions.getTournamentInfo("dream_43", 2).call()
+# print(tournament_info)
+
+
+tourn_id = "dream_43"
+print("Tournament_id is " + tourn_id)
+for gm_ctr in range(1,4):
+	try:
+		# print(gm_ctr)
+		game_id = contract.functions.getGame(tourn_id, gm_ctr).call()
+		if game_id[1] != 0:  # If the game ID is non-zero, it exists
+			tourn_info = contract.functions.getTournamentInfo(tourn_id, gm_ctr).call()
+			print("Game #",end='')
+			print(gm_ctr, end='')
+			print(" ", end='')
+			print(tourn_info)			
+	except Exception as e:
+		print(f"Error checking game existence: {e}")
+		continue

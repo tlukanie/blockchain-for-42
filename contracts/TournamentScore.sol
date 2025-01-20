@@ -14,7 +14,8 @@ contract TournamentScore {
     );
 
 	// event TournamentInfoTracked(
-	// 	string	tournament_id
+	// 	string	tournament_id,
+	// 	uint256 game_id
 	// );
 
     // Struct definition
@@ -93,13 +94,12 @@ contract TournamentScore {
 
 	function getTournamentInfo(string memory _tournament_id, uint256 _game_id)
 		public
-		view
 		returns (Tournament memory)
 	{
 		Tournament memory all_data = tournaments[_tournament_id][_game_id];
 		return all_data;
 
-		// emit TournamentInfoTracked(_tournament_id);
+		// emit TournamentInfoTracked(_tournament_id, _game_id);
 	}
 
 
