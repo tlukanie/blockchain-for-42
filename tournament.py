@@ -21,7 +21,7 @@ with open("./build/contracts/TournamentScore.json", "r") as file:
 contract_abi = contract_json["abi"]
 print(contract_abi)
 # Define the contract address
-contract_address = "0x7D19A4075d66AD606599008fc0605182917c6638"
+contract_address = "0x33CCD09ADB0a36929BA27eC50e3d22cD356ECec9"
 # Connect to the Ethereum provider
 web3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
 
@@ -84,7 +84,7 @@ for index, row in df.iterrows():
 # print(tournament_info)
 
 
-tourn_id = "dream_43"
+tourn_id = "no_dream"
 print("Tournament_id is " + tourn_id)
 for gm_ctr in range(1,4):
 	try:
