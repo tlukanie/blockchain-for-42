@@ -4,11 +4,11 @@ from solcx import compile_standard
 from web3 import Web3
 
 # Player and loser details
-player1_addr = "0x5c37Dd916cCd0c8C9a04931ae017e9A4A094c654"
-player1_prvt_key = "0xcec5ae10620cb46a42eceb04a2f0e581ff1f07c7f469bde8d7b41f2147e80d77"
+player1_addr = "0x52A67D88a11F075aAefFFC4AB2bF19aF92113589"
+player1_prvt_key = "0x959a851d406255ddd71d207de6009bb9ec914f9f2eb48bc1e4eba1c619d9ee80"
 
-loser_addr = "0xB732cC5ab65fa3e64516772a5F8842e59F162168"
-loser_prvt_key = "0x2f1c8e69244d21cbae697a81f3b1f04b5052bd2bb830f9300201999781297e87"
+loser_addr = "0x62a21945dF073aB157308786CE5Da0D06741E2f2"
+loser_prvt_key = "0xce6b31a9968739ee4586b9ae142c288c1f935b434531e51c313f0b42c013d39a"
 
 # Load CSV into a DataFrame
 csv_file = "multisig_oneline.csv"
@@ -50,6 +50,20 @@ print(f"Loser Address: {loser_addr}")
 for index, row in df.iterrows():
     print(row)
     print("index: ", index)
+
+	# Pre-check if the game already exists in the contract
+    try:
+        game_exists = contract.functions.getGame(
+            row['tournament_id'], 
+            int(row['game_id'])
+        ).call()
+
+        if game_exists[1] != 0:  # If the game ID is non-zero, it exists
+            print(f"Skipping existing game: {row['tournament_id']} - {row['game_id']}")
+            continue
+    except Exception as e:
+        print(f"Error checking game existence: {e}")
+        continue
 
     # Step 1: Approvals
     try:
@@ -114,3 +128,19 @@ for index, row in df.iterrows():
 
 
 # test retrieving the data that was stored on the blockchain!!!
+# getting all the related information about games in the tournament
+tourn_id = "dream_88"
+print("Tournament_id is " + tourn_id)
+for gm_ctr in range(1,4):
+	try:
+		# print(gm_ctr)
+		game_id = contract.functions.getGame(tourn_id, gm_ctr).call()
+		if game_id[1] != 0:  # If the game ID is non-zero, it exists
+			tourn_info = contract.functions.getTournamentInfo(tourn_id, gm_ctr).call()
+			print("Game #",end='')
+			print(gm_ctr, end='')
+			print(" ", end='')
+			print(tourn_info)			
+	except Exception as e:
+		print(f"Error checking game existence: {e}")
+		continue

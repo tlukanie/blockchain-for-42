@@ -11990,12 +11990,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xC0F7B0699BDDd1f423099B1e6fBdF713a95A6270",
-      "transactionHash": "0x254a364709cae02ae554c5f461450a62ec8d8ceb20b216ff8b65fc9456e6f36e"
+      "address": "0x67522F1a05CB72bE8C39b0f4355443b699172866",
+      "transactionHash": "0xb59aad6971e2b124992269e095508535c166fc4b9c7486c6ca43365ebd453cdb"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2025-01-20T18:09:01.677Z",
+  "updatedAt": "2025-01-21T14:21:12.190Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
