@@ -154,18 +154,20 @@ for index, row in df.iterrows():
 tournament_id = "her_dream"  # Replace with a valid tournament ID
 print(f"\nRetrieving games for Tournament ID: {tournament_id}")
 
+#is_approved = contract.functions.getApproval("her_dream", 2).call()
+
 for game_id in range(1, 4):
-    # is_approved = contract.functions.getApproval(tournament_id, game_id).call()
-    # print(is_approved)
     try:
+        is_approved = contract.functions.getApproval(tournament_id, game_id).call()
         game = contract.functions.getGame(tournament_id, game_id).call()
-        if game[1] != 0:  # If the game ID is non-zero, it exists
+        if game[1] != 0 and is_approved:  # If the game ID is non-zero, it exists
+            print("Signed by both winner and loser ",end='')
             print(f"Game {game_id}: {game}")
     except Exception as e:
         print(f"Error retrieving game {game_id}: {e}")
 
 # testing whether info is fully approved
-is_approved = contract.functions.getApproval("her_dream", 2).call()
-print(is_approved)
-is_approved = contract.functions.getApproval("her_dream", 3).call()
-print(is_approved)
+# is_approved = contract.functions.getApproval("her_dream", 2).call()
+# print(is_approved)
+# is_approved = contract.functions.getApproval("her_dream", 3).call()
+# print(is_approved)
