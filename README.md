@@ -107,3 +107,6 @@ const instance = await HelloBlockchain.at("0xYourContractAddressHere");
 <p>./manage.py runserver</p>
 <h2>12.01.25</h2>
 <p>Updated blockchain branch, but still need to add functionality to game.py and fix bind wallet button</p>
+<h2>22.01.25</h2>
+<p>Proceed with updated django in trans_dj_january_21</p>
+<p>Add functionality for processing the wallet data, integrating blockchain</p>
