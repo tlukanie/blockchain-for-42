@@ -157,6 +157,7 @@ print(f"\nRetrieving games for Tournament ID: {tournament_id}")
 #is_approved = contract.functions.getApproval("her_dream", 2).call()
 
 #create function that returns json to display the information about the games
+# function should check whether there is a final game, if it's not it should not display anything and it will return  empty json file
 
 for game_id in range(1, 4):
     try:
