@@ -156,6 +156,8 @@ print(f"\nRetrieving games for Tournament ID: {tournament_id}")
 
 #is_approved = contract.functions.getApproval("her_dream", 2).call()
 
+#create function that returns json to display the information about the games
+
 for game_id in range(1, 4):
     try:
         is_approved = contract.functions.getApproval(tournament_id, game_id).call()
