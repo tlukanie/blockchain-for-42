@@ -4,11 +4,11 @@ from solcx import compile_standard
 from web3 import Web3
 
 # Player and loser details
-player1_addr = "0xdA95FE8C72182b8A01FC948CA6675577568e664E"
-player1_prvt_key = "0x46f984c865b7d10800a66816f786b2a6a2de6d95139eee53054928970f62b58d"
+player1_addr = "0x1869E220e2503ac1caEAd65D27B029cc53A39Ce3"
+player1_prvt_key = "0xf640d5e67430fea46e0f48a98dbd1236a902ca147d9ddd487138498a33abc7d3"
 
-loser_addr = "0xf487e94f21A4f7a8B997793a6D3985789756824A"
-loser_prvt_key = "0x3d90f29aa2ac72216cd1b56a6d8c98023a41482e249f2c99891707fe4f8f59e7"
+loser_addr = "0xA7e5aC7B607755EDc8dD06Beb80f4F8c422CA716"
+loser_prvt_key = "0x309643e424db922cafe9bc5aa618619a0c31aed910d8cf24e16aab297d60dc55"
 
 # Load CSV into a DataFrame
 csv_file = "multisig_oneline.csv"
@@ -26,7 +26,7 @@ with open("./build/contracts/MultisigTournament.json", "r") as file:
 contract_abi = contract_json["abi"]
 
 # Define the contract address
-contract_address = "0xFcc642f1924C09c46e0D286533389f6A877b2155"  # Replace with your deployed address
+contract_address = "0x4D644E3EC1D560E82A88e4a5b48a41F120973CCf"  # Replace with your deployed address
 
 # Connect to the Ethereum provider
 web3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
