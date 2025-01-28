@@ -158,6 +158,7 @@ print(f"\nRetrieving games for Tournament ID: {tournament_id}")
 
 #create function that returns json to display the information about the games
 # function should check whether there is a final game, if it's not it should not display anything and it will return  empty json file
+# inside of the json there should be a variable responsible for the status of thhe tournament on blockchain finished/in progress (in case only 1 or 2 games info present)/not found
 
 for game_id in range(1, 4):
     try:
